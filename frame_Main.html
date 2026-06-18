@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nội Dung Chính</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* 1. Đổi sang nền tối không gian số đồng bộ với mục lục */
+        body {
+            background: radial-gradient(circle at center, #111827 0%, #0f172a 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* 2. Biểu tượng Neon chuyển động nhịp đập mượt mà */
+        .placeholder .icon {
+            font-size: 5.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+            animation: floatAndGlow 3s ease-in-out infinite alternate;
+        }
+        
+        /* 3. Tiêu đề phát sáng nhẹ màu xanh Cyan */
+        .placeholder h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #06b6d4;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+        }
+        
+        /* 4. Dòng chữ hướng dẫn màu xám bạc dễ nhìn trên nền tối */
+        .placeholder p {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            max-width: 400px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Khung viền mờ ảo công nghệ bao quanh khu vực chữ */
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(6, 182, 212, 0.2);
+            padding: 35px 45px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Hiệu ứng hoạt họa vừa nhấp nháy phát sáng vừa nhấc lên nhẹ nhàng */
+        @keyframes floatAndGlow {
+            0% {
+                transform: translateY(0);
+                text-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-12px);
+                text-shadow: 0 0 30px rgba(217, 70, 239, 0.9);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="placeholder">
+        <div class="info-card">
+            <div class="icon">🖥️</div>
+            <h2>Nội dung đang chờ hiển thị...</h2>
+            <p>Vui lòng chọn một bài tập bất kỳ từ thanh danh mục bên trái để bắt đầu xem nội dung chi tiết nha!</p>
+        </div>
+    </div>
+</body>
+</html>
