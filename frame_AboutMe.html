@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer - Chuẩn Tông Giao Diện</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #2d1e18; /* Màu nâu trầm đồng bộ với nền sidebar và nội dung */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .footer {
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Đường kẻ phía trên phát sáng nhẹ cùng tông với viền banner */
+            border-top: 1px solid rgba(255, 213, 128, 0.2);
+            background: #231712; 
+        }
+        
+        /* KHUNG CHỮ CHẠY PHỐI 2 MÀU CỰC ĐẸP */
+        .marquee-container {
+            /* Phối mượt mà giữa màu Nâu Đậm của banner và màu Vàng Kem của nút bấm */
+            background: linear-gradient(135deg, #422d25 0%, #d5a986 100%);
+            padding: 6px 35px;
+            border-radius: 25px;
+            
+            /* Hiệu ứng viền sáng mỏng tinh tế */
+            border: 1px solid rgba(255, 235, 204, 0.4); 
+            
+            /* Quầng sáng vàng hổ phách tỏa nhẹ xung quanh giống hiệu ứng trên banner */
+            box-shadow: 0 0 15px rgba(213, 169, 134, 0.5),
+                        0 4px 10px rgba(0, 0, 0, 0.3);
+            
+            transition: all 0.3s ease;
+        }
+        
+        /* Hiệu ứng tăng sáng nhẹ khi đưa chuột vào */
+        .marquee-container:hover {
+            box-shadow: 0 0 22px rgba(213, 169, 134, 0.8);
+            transform: scale(1.02);
+        }
+        
+        /* Chữ chạy bên trong */
+        .marquee-container marquee {
+            color: #fdf6ec; /* Màu chữ be sáng để luôn nổi bật trên nền gradient */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="marquee-container">
+            <marquee behavior="alternate" scrollamount="4">
+                Huynh Thi Hoai Thuong Bai
+            </marquee>
+        </div>
+    </div>
+</body>
+</html>

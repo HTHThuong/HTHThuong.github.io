@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội Dung Chính - Khung Màu Be Chuẩn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Nền tổng thể màu nâu trầm đồng bộ với giao diện tối */
+        body {
+            background: #2d1e18;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* KHUNG CARD CHÍNH: Đổi sang màu Be sáng sang trọng */
+        .info-card {
+            background: #fdf6ec; /* Màu be sáng chuẩn như hình mẫu */
+            border: 1px solid #e6d5c3;
+            padding: 45px 55px;
+            border-radius: 24px;
+            /* Đổ bóng màu nâu mờ tinh tế tạo độ nổi cho khung be */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 
+                        0 0 15px rgba(141, 110, 99, 0.2);
+            max-width: 600px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Biểu tượng màn hình màu nâu đen phát sáng viền vàng hổ phách mượt mà */
+        .placeholder .icon {
+            font-size: 5rem;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 10px rgba(141, 110, 99, 0.3));
+            animation: floatAndGlow 3s ease-in-out infinite alternate;
+        }
+        
+        /* Tiêu đề màu nâu đậm phát sáng nhẹ */
+        .placeholder h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #4e342e; /* Màu nâu đậm để nổi bật trên nền be */
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 8px rgba(141, 110, 99, 0.15);
+        }
+        
+        /* Dòng chữ hướng dẫn màu nâu xám ấm, font nghiêng dễ nhìn */
+        .placeholder p {
+            font-size: 1.05rem;
+            color: #6d4c41; 
+            line-height: 1.6;
+            font-style: italic;
+            opacity: 0.95;
+        }
+        
+        /* Hiệu ứng hoạt họa chuyển động nhịp đập mượt mà cho icon */
+        @keyframes floatAndGlow {
+            0% {
+                transform: translateY(0);
+                filter: drop-shadow(0 0 8px rgba(141, 110, 99, 0.2));
+            }
+            100% {
+                transform: translateY(-10px);
+                filter: drop-shadow(0 0 18px rgba(213, 169, 134, 0.6));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="placeholder">
+        <div class="info-card">
+            <div class="icon">🖥️</div>
+            <h2>Nội dung đang chờ hiển thị...</h2>
+            <p>Vui lòng chọn một bài tập bất kỳ từ thanh danh mục bên trái để bắt đầu xem nội dung chi tiết nha!</p>
+        </div>
+    </div>
+</body>
+</html>
