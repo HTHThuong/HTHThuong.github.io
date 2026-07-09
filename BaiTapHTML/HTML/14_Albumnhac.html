@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhạc Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Nền tối mang phong cách ứng dụng nghe nhạc chuyên nghiệp */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #ffffff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Khung chứa danh sách bài hát */
+        .playlist-container {
+            width: 100%;
+            max-width: 600px;
+            background: #181818;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Tiêu đề "Nhạc Online" màu đỏ chuyển sắc nổi bật */
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
+        }
+
+        /* Cấu trúc danh sách bài hát */
+        .song-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Định dạng từng dòng bài hát thành một thanh chứa */
+        .song-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        /* Hiệu ứng khi di chuột qua bài hát */
+        .song-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        /* Số thứ tự bài hát */
+        .song-num {
+            width: 30px;
+            color: #b3b3b3;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Thẻ liên kết bọc toàn bộ thông tin chữ */
+        .song-link {
+            flex-grow: 1;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            padding-right: 15px;
+        }
+
+        .song-item:hover .song-link {
+            color: #ff416c; /* Chữ đổi màu hồng đỏ khi hover */
+        }
+
+        /* Biểu tượng nút Play giả lập ở góc phải */
+        .play-btn {
+            width: 32px;
+            height: 32px;
+            background: #ff416c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.2s ease;
+        }
+
+        /* Hiện nút Play khi rê chuột vào thanh bài hát */
+        .song-item:hover .play-btn {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Ký hiệu hình tam giác nút Play bằng CSS */
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 10px solid white;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="playlist-container">
+        <h1>Nhạc Online</h1>
+        
+        <ul class="song-list">
+            <li class="song-item">
+                <span class="song-num">01</span>
+                <a href="#" class="song-link">Chia xa (Ghé Qua)</a>
+                <div class="play-btn"><div class="play-icon"></div></div>
+            </li>
+            
+            <li class="song-item">
+                <span class="song-num">02</span>
+                <a href="#" class="song-link">Nỗi buồn chim sáo (Nhớ người yêu cũ)</a>
+                <div class="play-btn"><div class="play-icon"></div></div>
+            </li>
+            
+            <li class="song-item">
+                <span class="song-num">03</span>
+                <a href="#" class="song-link">Lùi về sau em mãi</a>
+                <div class="play-btn"><div class="play-icon"></div></div>
+            </li>
+            
+            <li class="song-item">
+                <span class="song-num">04</span>
+                <a href="#" class="song-link">Phố nghiêng</a>
+                <div class="play-btn"><div class="play-icon"></div></div>
+            </li>
+            
+            <li class="song-item">
+                <span class="song-num">05</span>
+                <a href="#" class="song-link">Say giấc chiêm bao</a>
+                <div class="play-btn"><div class="play-icon"></div></div>
+            </li>
+            
+            <li class="song-item">
+                <span class="song-num">06</span>
+                <a href="#" class="song-link">Hoàng hôn nắng chiều</a>
+                <div class="play-btn"><div class="play-icon"></div></div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
